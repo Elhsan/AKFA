@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+
+{% block title %}
+     Home
+{% endblock title %}
+
+{% block css %}
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <div class="home_page_1">
+        <h1>Выберите Удобство</h1>
+        <p>Мы предлагаем вам качествыенный и долговечный продукт, спасибо что выбрали нас!</p>
+    </div>
+{% endblock content %}
+

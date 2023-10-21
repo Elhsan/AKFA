@@ -1,0 +1,41 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Akfa
+        {% endblock title %}
+    </title>
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block link %}
+    {% endblock link %}
+
+    {% block style %}
+    {% endblock style %}
+</head>
+<body>
+  {% bootstrap_messages %}
+    
+  <main>
+    <div>
+      {% include 'navbar.html' %}
+    </div>
+    
+    <div class="contant">
+      {% block content %}
+      {% endblock content %}
+      
+      {% block script %}
+      {% endblock script %}
+    </div>
+  </main>
+  
+  {% bootstrap_javascript %}
+</body>
+</html>
