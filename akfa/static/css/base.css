@@ -12,3 +12,13 @@
 .home_page_1 h1{
     padding-top: 100px;
 }
+.home_page_2{
+    padding-top: 35px;
+    height: 150px;
+    text-align: center;
+}
+
+.home_page_2 .color_text_home_page_2 {
+    text-shadow: 3px 3px 5px rgb(156, 0, 148);
+    color: rgb(156, 0, 148);
+}
