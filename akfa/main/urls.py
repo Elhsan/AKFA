@@ -5,9 +5,11 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('register/', registration, name='register'),
+    path('weqqweasdasdwqe/', first_view, name='home_page'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(template_name='registration/logout.html'), name='logout'),
-    path("", first_view, name='home_page2'),
-    path("ssc/", first_view2,  name='home_page')
+    path("", registration, name='register'),
+    path("scc/", first_view2,  name='home_page2'),
+    path("Order/", Order,  name='Order'),
+    path('/order/<int:pk>', OrderDetails.as_view(), name='order-details'),
 ]

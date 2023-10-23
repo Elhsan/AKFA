@@ -6,8 +6,6 @@
 <nav class="navbar navbar-dark  fixed-top" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="http://127.0.0.1:8000/"><img src="{% static 'img/Akfa_logo.png' %} " alt="" width="140px" height="54px" /></a>
-    <button class="login"><a href="{% url 'login' %}">login</a></button>
-    <button class="register"><a href="{% url 'register' %}">register</a></button>
     <button class="navbar-toggler text-light bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
@@ -20,7 +18,12 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{% url 'home_page2' %}">Добавить заказ</a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Order' %}">Заказы</a>
+
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>

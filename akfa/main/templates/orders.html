@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block title %}
+   Order
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/order.css' %}">
+
+{% endblock css %}
+
+{% block content %}
+{% for el in order  %}
+
+  <div class="home_page_3">
+  
+      <div class="row row-cols-1 row-cols-md-2 g-4" id="cards">
+        <div class="col" id='col'>
+          <div class="card">
+           
+            <div class="card-body">
+              <h3 class="card-title" id='title'>{{ el.name }}</h3>
+              <p class="card-text" id='text'>Price: {{ el.price }}</p>
+              <p class="card-text" id='text'>Material: {{ el.material }}</p>
+              <a href="{% url 'order-details' el.id %}">Посмотреть</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+
+{% endblock content %}
+
