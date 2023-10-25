@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+  Заказы
+{% endblock %}
+
+{% block content %}
+  <div class="home">
+    <h1>Добавить Заказ</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type='submit'>Добавить заказ</button>
+
+    </form>
+  </div>
+
+  <style>
+    
+  </style>
+{% endblock %}

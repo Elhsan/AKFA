@@ -1,0 +1,49 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+  Заказы
+{% endblock %}
+
+{% block content %}
+  <div class="home">
+    <h1>Заказы</h1>
+
+    <table>
+      <tr class="1">
+        <th>Имя</th>
+
+        <th>Размеры</th>
+        <th>Стоимость</th>
+        <th>материал</th>
+      </tr>
+      {% for el in order %}
+        <tr class="tr2">
+          <td>{{ el.имя }}</td>
+          <td>{{ el.размеры }}</td>
+          <td>{{ el.стоимость }}</td>
+          <td>{{ el.материал }}</td>
+          <td><a href="{% url 'news_detail' el.id %}">Посмотреть</a></td>
+          
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <style>
+    .table {
+      margin-top: 20px;
+    }
+    .tr1 {
+      background-color: aqua;
+      font-weight: bold;
+    }
+    .tr2 {
+      background-color: aquamarine;
+    
+      vertical-align: middle;
+    }
+    .tr2 td {
+      border: red solid 2px;
+    }
+  </style>
+{% endblock %}

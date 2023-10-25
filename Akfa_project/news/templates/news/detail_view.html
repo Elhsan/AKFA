@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+  Заказы
+{% endblock %}
+
+{% block content %}
+  <div class="home">
+    <h1>Заказ</h1>
+
+
+    <p>{{ order.имя }}</p>
+
+    <p>{{ order.размеры }}</p>
+    <p>{{ order.стоимость }}</p>
+    <p>{{ order.материал }}</p>
+    <a href="{% url 'news_delete' order.id %}" class="btn btn-danger">Удалить</a>
+    <a href="{% url 'news_update' order.id %}" class="btn btn-info">Изменить</a>
+    
+  </div>
+
+  <style>
+    
+  </style>
+{% endblock %}
