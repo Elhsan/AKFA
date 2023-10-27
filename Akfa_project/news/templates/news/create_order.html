@@ -1,16 +1,39 @@
 {% extends 'main/layout.html' %}
-
+{% load static %}
 {% block title %}
   Заказы
 {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'main/css/create_order.css' %}">
 
+{% endblock %}
 {% block content %}
   <div class="home">
     <h1>Добавить Заказ</h1>
 
     <form method="POST">
         {% csrf_token %}
-        {{ form }}
+        
+
+
+<div class="name">
+  <p>Имя:  {{ form.имя }}</p>
+
+  
+</div>
+<div class="razmer">
+  <p>Размер:  {{ form.размеры }}</p>
+
+</div>
+<div class="cost">
+  <p>Стоимость:  {{ form.стоимость }}</p>
+  
+</div>
+<div class="material">
+  <p>Материал:  {{ form.материал }}</p>
+  
+  
+</div>
         <button type='submit'>Добавить заказ</button>
 
     </form>
